@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { 
-				View, 
 				ScrollView, 
 				Text,
 				TextInput,
@@ -9,8 +8,8 @@ import {
 import { supabase } from '../lib/initSupabase';
 
 function AuthScreen(): JSX.Element {
- const [email, setEmail] = useState()
- const [password, setPassword] = useState()
+ const [email, setEmail] = useState("")
+ const [password, setPassword] = useState("")
 
  async function handleLogin() {
 	const { data, error } = await supabase.auth.signUp({email, password})
